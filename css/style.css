@@ -1,0 +1,80 @@
+body {
+  background:#8eeefff8 ;
+}
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  color: red;
+  text-align: center;
+}
+p {
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  font-size: 1.7rem;
+  color: #8ba301a2;
+}
+  .grid {
+  border: 2px solid slategray;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+ol, ul{
+  list-style-type:none;
+}
+ol{
+  letter-spacing: 1.7px;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 30% ;
+  padding: 20px;
+}
+form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "i1 i2"
+    "ta ta"
+    "bt bt";
+}
+input,
+textarea{
+  margin: 5px;
+  height: 45px;
+  border: 1px solid rgb(112, 65, 65);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-family: "font-1";
+}
+#firstname {
+  grid-area: i1;
+}
+#surname{
+  grid-area: i2;
+}
+textarea{
+  grid-area: ta;
+  resize: none;
+}
+input[type="submit"] {
+  grid-area: bt;
+  cursor: pointer;
+  transition: 0.4s;
+}
+input[type="submit"]:hover{
+  background: red;
+  color: aqua;
+}
+@media screen and (max-width: 1000px) {
+  .grid-container{
+    display: block;
+  }
+}
